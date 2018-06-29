@@ -145,17 +145,17 @@ G = generate_graph()
 T = 10
 #the size of failure
 print("Decide the size of failure:")
-f = input() # now for this experience, we have 4 failed nodes
+f = 4 #input() # now for this experience, we have 4 failed nodes
 
 failed_nodes = []
-count = 0
-while count < int(f):
-    failure = randint(0,len(G.nodes())-1)
-    if failure not in failed_nodes:
-        failed_nodes.append(failure)
-        count += 1
+#count = 0
+#while count < int(f):
+#    failure = randint(0,len(G.nodes())-1)
+#    if failure not in failed_nodes:
+#        failed_nodes.append(failure)
+#        count += 1
 
-#failed_nodes = [1,4,6,3] # fixed failed nodes
+failed_nodes = [1,4,6,3] # fixed failed nodes
 
 
 rcv_amts = nx.get_node_attributes(G, "rcv_amt")
